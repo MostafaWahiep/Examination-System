@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="716.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SetexamController">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Set Exams">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="21.0" layoutY="37.0" prefHeight="687.2" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label text="Exam Information">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <GridPane prefHeight="178.0" prefWidth="587.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Course" />
+                                    <Label text="Start Time" GridPane.columnIndex="2" />
+                                    <Label text="End Time" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField fx:id="startTime" GridPane.columnIndex="3" />
+                                    <TextField fx:id="endTime" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <Label text="Date" GridPane.rowIndex="1" />
+                                    <DatePicker fx:id="Date" prefHeight="26.0" prefWidth="122.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="duration" prefHeight="26.0" prefWidth="118.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <ChoiceBox fx:id="Course" prefHeight="26.0" prefWidth="122.0" GridPane.columnIndex="1" />
+                                    <Label text="Duration" GridPane.rowIndex="2" />
+                                    <Button mnemonicParsing="false" onAction="#create" prefHeight="26.0" prefWidth="193.0" text="Create exam" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <Button mnemonicParsing="false" onAction="#returnb" text="Return" />
+                              <Separator prefWidth="200.0" />
+                              <Label text="Question Maker">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <GridPane prefHeight="323.0" prefWidth="579.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.80001220703124" minWidth="1.0" prefWidth="97.5999755859375" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="510.3999755859375" minWidth="10.0" prefWidth="482.4000244140625" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Question" />
+                                    <Label text="First Answer" GridPane.rowIndex="1" />
+                                    <Label text="Second Answer" GridPane.rowIndex="2" />
+                                    <Label text="Third Answer" GridPane.rowIndex="3" />
+                                    <Label text="Fourth Answer" GridPane.rowIndex="4" />
+                                    <Label text="Correct Answer" GridPane.rowIndex="5" />
+                                    <Label text="Grade" GridPane.rowIndex="6" />
+                                    <TextField fx:id="Question" GridPane.columnIndex="1" />
+                                    <TextField fx:id="firstAnswer" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="secondAnswer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="thirdAnswer" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="correctAnswer" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="fourthAnswer" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="Grade" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                 </children>
+                              </GridPane>
+                              <Button mnemonicParsing="false" onAction="#addquestion" prefHeight="26.0" prefWidth="62.0" text="Add" />
+                              <Label fx:id="Mark" text="Mark" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Added Questions">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView layoutX="346.0" layoutY="251.0" prefHeight="687.2" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
