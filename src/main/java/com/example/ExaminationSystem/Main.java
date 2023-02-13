@@ -10,7 +10,13 @@ import java.util.ArrayList;
 
 public class Main extends Application {
 
-    static int us = 0;
+    /*
+    0-->none(default)
+    1-->adminstrator
+    2-->instructor
+    3-->student
+    */
+    static int UserType = 0;
     static ArrayList<Student> students;
     static ArrayList<Instructor> instructors;
     static ArrayList<Adminstrator> admins;

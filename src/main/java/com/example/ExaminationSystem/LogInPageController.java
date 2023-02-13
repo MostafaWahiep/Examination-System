@@ -28,7 +28,7 @@ public class LogInPageController {
 
     @FXML
     void back(ActionEvent event) throws IOException {
-        Main.us = 0;
+        Main.UserType = 0;
         Parent root1 = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
         Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
 
@@ -41,7 +41,7 @@ public class LogInPageController {
     void btnlogin(ActionEvent event) throws IOException {
         TestLogin tt = new TestLogin(textuser.getText(),textpass.getText());
         Parent root1 = null;
-        if(Main.us == 3)
+        if(Main.UserType == 3)
         {
             if(Main.stlogin(tt)==true) {
                 root1 = FXMLLoader.load(getClass().getResource("StudentPage.fxml"));
@@ -53,7 +53,7 @@ public class LogInPageController {
             else
                 Wrong_Login.setText("invalid username or password");
         }
-        else if(Main.us == 2)
+        else if(Main.UserType == 2)
         {
             if(Main.inlogin(tt)==true) {
                 root1 = FXMLLoader.load(getClass().getResource("InstructorMainPage.fxml"));

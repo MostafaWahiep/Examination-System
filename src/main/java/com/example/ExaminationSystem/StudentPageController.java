@@ -52,7 +52,7 @@ public class StudentPageController implements Initializable {
 
     @FXML
     void back(ActionEvent event) throws IOException {
-        Main.us = 0;
+        Main.UserType = 0;
         Parent root1 = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
         Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
         Scene scene1 = new Scene(root1);

@@ -20,7 +20,6 @@ import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-
 /**
  * FXML Controller class
  *
@@ -50,12 +49,11 @@ public class MainPageController implements Initializable {
     @FXML
     void buttona(ActionEvent event) throws IOException {
 
-        Main.us = 1;
+        Main.UserType = 1;
     }
     @FXML
     void buttons(ActionEvent event) throws IOException {
-
-        Main.us = 3;
+        Main.UserType = 3;
         Parent root1 = FXMLLoader.load(getClass().getResource("LogInPage.fxml"));
         Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
         Scene scene1 = new Scene(root1);
@@ -65,8 +63,7 @@ public class MainPageController implements Initializable {
     }
     @FXML
     void buttoni(ActionEvent event) throws IOException {
-
-        Main.us = 2;
+        Main.UserType = 2;
         Parent root1 = FXMLLoader.load(getClass().getResource("LogInPage.fxml"));
         Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
         Scene scene1 = new Scene(root1);
