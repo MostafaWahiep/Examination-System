@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SetexamController {
+public class SetExamController {
     Exam exam;
     ObservableList<String> courseList = FXCollections.observableArrayList();
     @FXML
@@ -47,24 +47,24 @@ public class SetexamController {
     private ChoiceBox Course;
     @FXML
     private void initialize(){
-        for(Course c:HelloApplication.courses)
+        for(Course c: Main.courses)
             courseList.add(c.getName());
         Course.setItems(courseList);
     }
     @FXML
     private void create(){
-        Course c = HelloApplication.courses.get(Course.getSelectionModel().getSelectedIndex());
+        Course c = Main.courses.get(Course.getSelectionModel().getSelectedIndex());
         System.out.println(c.getCourse_code());
         exam= new Exam(c,new Float(duration.getText()), new Float(startTime.getText()), new Float(endTime.getText()), Date.getValue().toString());
-        HelloApplication.exams.add(exam);
+        Main.exams.add(exam);
         Histogram histo = new Histogram(exam);
-        Exam_Report exam_report = new Exam_Report(exam, histo);
+        ExamReport exam_report = new ExamReport(exam, histo);
         exam.setExam_report(exam_report);
     }
     @FXML
     void returnb(ActionEvent event) throws IOException
     {
-        Parent root1 = FXMLLoader.load(getClass().getResource("instmain.fxml"));
+        Parent root1 = FXMLLoader.load(getClass().getResource("InstructorMainPage.fxml"));
         Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
         Scene scene1 = new Scene(root1);
         appst.setScene(scene1);

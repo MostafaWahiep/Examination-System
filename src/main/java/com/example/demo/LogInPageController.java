@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloController {
+public class LogInPageController {
 
     @FXML
     private Label Wrong_Login;
@@ -28,8 +28,8 @@ public class HelloController {
 
     @FXML
     void back(ActionEvent event) throws IOException {
-        HelloApplication.us = 0;
-        Parent root1 = FXMLLoader.load(getClass().getResource("FXML.fxml"));
+        Main.us = 0;
+        Parent root1 = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
         Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
 
         Scene scene1 = new Scene(root1);
@@ -41,10 +41,10 @@ public class HelloController {
     void btnlogin(ActionEvent event) throws IOException {
         TestLogin tt = new TestLogin(textuser.getText(),textpass.getText());
         Parent root1 = null;
-        if(HelloApplication.us == 3)
+        if(Main.us == 3)
         {
-            if(HelloApplication.stlogin(tt)==true) {
-                root1 = FXMLLoader.load(getClass().getResource("Student.fxml"));
+            if(Main.stlogin(tt)==true) {
+                root1 = FXMLLoader.load(getClass().getResource("StudentPage.fxml"));
                 Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
                 Scene scene1 = new Scene(root1);
                 appst.setScene(scene1);
@@ -53,10 +53,10 @@ public class HelloController {
             else
                 Wrong_Login.setText("invalid username or password");
         }
-        else if(HelloApplication.us == 2)
+        else if(Main.us == 2)
         {
-            if(HelloApplication.inlogin(tt)==true) {
-                root1 = FXMLLoader.load(getClass().getResource("instmain.fxml"));
+            if(Main.inlogin(tt)==true) {
+                root1 = FXMLLoader.load(getClass().getResource("InstructorMainPage.fxml"));
                 Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
                 Scene scene1 = new Scene(root1);
                 appst.setScene(scene1);
@@ -70,7 +70,7 @@ public class HelloController {
     }
     @FXML
     void btnreg(ActionEvent event) throws IOException {
-        Parent root1 = FXMLLoader.load(getClass().getResource("Register.fxml"));
+        Parent root1 = FXMLLoader.load(getClass().getResource("RegisterPage.fxml"));
         Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
         Scene scene1 = new Scene(root1);
         appst.setScene(scene1);

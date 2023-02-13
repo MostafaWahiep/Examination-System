@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="612.0" prefWidth="840.0" style="-fx-background-color: #F1F4FFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.FXMLController">
+<AnchorPane id="AnchorPane" prefHeight="612.0" prefWidth="840.0" style="-fx-background-color: #F1F4FFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainPageController">
    <children>
       <AnchorPane prefHeight="235.0" prefWidth="840.0" style="-fx-background-color: #A2A2A1FF;">
          <opaqueInsets>
@@ -24,17 +24,17 @@
       </AnchorPane>
       <ImageView fx:id="inss" accessibleRole="BUTTON" fitHeight="190.0" fitWidth="180.0" layoutX="121.0" layoutY="335.0">
          <image>
-            <Image url="@3048703.png" />
+            <Image url="@InstructorIcon.png" />
          </image>
       </ImageView>
       <ImageView fx:id="stude" accessibleRole="BUTTON" fitHeight="190.0" fitWidth="180.0" layoutX="350.0" layoutY="335.0">
          <image>
-            <Image url="@2103305.png" />
+            <Image url="@StudentIcon.png" />
          </image>
       </ImageView>
       <ImageView fx:id="adminss" accessibleRole="BUTTON" fitHeight="190.0" fitWidth="180.0" layoutX="579.0" layoutY="335.0" onMouseClicked="#buttona">
          <image>
-            <Image url="@2942813.png" />
+            <Image url="@AdminIcon.png" />
          </image>
       </ImageView>
       <Label layoutX="290.0" layoutY="260.0" prefHeight="18.0" prefWidth="282.0" text="          Who are you?">

@@ -26,7 +26,6 @@ public class Student extends User {
         addexam(exam);
         int grade = 0;
         for(Question q:exam.getQuestions()){
-            Main.displayques(q);
             System.out.print("enter your choice: ");
             grade += q.check_ans(s.next().charAt(0));
         }

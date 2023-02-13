@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="602.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.Instmain">
+<AnchorPane prefHeight="602.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.InstructorMainPageController">
    <children>
       <Button fx:id="returnb" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#backk" prefHeight="34.0" prefWidth="46.0" text="Return">
          <font>
@@ -30,7 +30,7 @@
          </font></Button>
       <ImageView accessibleRole="BUTTON" fitHeight="229.0" fitWidth="241.0" layoutX="61.0" layoutY="196.0">
          <image>
-            <Image url="@quill-feather-ink-pen-hand-suit-vintage-woodcut-business-holding-writing-antique-well-retro-engraved-etched-print-243906734.jpg" />
+            <Image url="@SetExamIcon.jpg" />
          </image>
       </ImageView>
       <ComboBox fx:id="List" blendMode="HARD_LIGHT" layoutX="435.0" layoutY="14.0" prefWidth="150.0" promptText="List of Courses" />
@@ -41,7 +41,7 @@
       </Button>
       <ImageView accessibleRole="BUTTON" fitHeight="229.0" fitWidth="224.0" layoutX="322.0" layoutY="197.0">
          <image>
-            <Image url="@report.png.png" />
+            <Image url="@ReportIcon.png" />
          </image>
       </ImageView>
    </children>

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="691.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.Reportt">
+<AnchorPane prefHeight="691.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ReportPageController">
    <children>
       <Button fx:id="returnb" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnb" prefHeight="36.0" prefWidth="80.0" text="Return">
          <font>

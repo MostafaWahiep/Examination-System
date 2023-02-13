@@ -14,18 +14,18 @@ public class Exam {
     private boolean validation_status;
     private int num_of_questions;
     private boolean first_question;
-    private Exam_Report exam_report;
+    private ExamReport exam_report;
     private static int n_of_exams;
 
     public int getMark() {
         return mark;
     }
 
-    public void setExam_report(Exam_Report exam_report) {
+    public void setExam_report(ExamReport exam_report) {
         this.exam_report = exam_report;
     }
 
-    public Exam_Report getExam_report() {
+    public ExamReport getExam_report() {
         return exam_report;
     }
 
