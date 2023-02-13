@@ -72,7 +72,7 @@ public class Exam {
         this.mark = mark;
     }
 
-    public void addquestoin(Question question){
+    public void addquestion(Question question){
         this.mark += question.getGrade();
         if(first_question == true) {
             Question[] temp = new Question[num_of_questions + 1];

@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Tab;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -46,6 +47,11 @@ public class SetExamController {
     @FXML
     private ChoiceBox Course;
     @FXML
+    private Tab AddedQuestionsTab;
+    @FXML
+    private Tab SetExamTab;
+
+    @FXML
     private void initialize(){
         for(Course c: Main.courses)
             courseList.add(c.getName());
@@ -78,7 +84,7 @@ public class SetExamController {
         choices[2] = thirdAnswer.getText();
         choices[3] = fourthAnswer.getText();
         Question q = new Question(Question.getText(), choices, correctAnswer.getText().charAt(0), new Integer(Grade.getText()));
-        exam.addquestoin(q);
+        exam.addquestion(q);
         Mark.setText("Mark = " + exam.getMark());
         firstAnswer.setText("");
         secondAnswer.setText("");

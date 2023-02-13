@@ -80,31 +80,31 @@ public class Main extends Application {
         Question q5 = new Question("What will be the output from a D flip – flop if the clock is low and D = 0?", c5,'c',1);
         Question q6 = new Question("What will be the output from a D flip-flop if D = 1 and the clock is low?", c6, 'a', 1);
         Question q7 = new Question("What is a switching function that has more than one output called in Digital Electronics?",c7,'b',2);
-        exam.addquestoin(q1);
-        exam.addquestoin(q2);
-        exam.addquestoin(q3);
-        exam.addquestoin(q4);
-        exam.addquestoin(q5);
-        exam.addquestoin(q6);
-        exam.addquestoin(q7);
+        exam.addquestion(q1);
+        exam.addquestion(q2);
+        exam.addquestion(q3);
+        exam.addquestion(q4);
+        exam.addquestion(q5);
+        exam.addquestion(q6);
+        exam.addquestion(q7);
         launch();
     }
-    public static boolean stlogin(TestLogin tt)
+    public static boolean stlogin(TestLogin T)
     {
         for(int i=0;i<students.size();i++)
         {
-            if(students.get(i).verify_login(tt)==true)
+            if(students.get(i).verify_login(T)==true)
             {
                 return true;
             }
         }
         return false;
     }
-    public static boolean inlogin(TestLogin tt)
+    public static boolean inlogin(TestLogin T)
     {
         for(int i=0;i<instructors.size();i++)
         {
-            if(instructors.get(i).verify_login(tt)==true)
+            if(instructors.get(i).verify_login(T)==true)
             {
                 return true;
             }
