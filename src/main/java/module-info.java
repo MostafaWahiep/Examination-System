@@ -4,6 +4,6 @@ module com.example.demo {
     requires java.desktop;
 
 
-    opens com.example.demo to javafx.fxml;
-    exports com.example.demo;
+    opens com.example.ExaminationSystem to javafx.fxml;
+    exports com.example.ExaminationSystem;
 }
