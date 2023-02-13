@@ -52,27 +52,29 @@ public class FXMLController implements Initializable {
      
     @FXML
     void buttona(ActionEvent event) throws IOException {
-                System.out.println("ss");
+
         HelloApplication.us = 1;
     }
     @FXML
     void buttons(ActionEvent event) throws IOException {
-        System.out.println("ss");
+
         HelloApplication.us = 3;
         Parent root1 = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
         Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
         Scene scene1 = new Scene(root1);
         appst.setScene(scene1);
+        appst.setTitle(" ");
         appst.show();
     }
     @FXML
     void buttoni(ActionEvent event) throws IOException {
-        System.out.println("ss");
+
         HelloApplication.us = 2;
         Parent root1 = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
         Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
         Scene scene1 = new Scene(root1);
         appst.setScene(scene1);
+        appst.setTitle(" ");
         appst.show();
     }
     

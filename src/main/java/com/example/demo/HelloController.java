@@ -31,8 +31,10 @@ public class HelloController {
         HelloApplication.us = 0;
         Parent root1 = FXMLLoader.load(getClass().getResource("FXML.fxml"));
         Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
+
         Scene scene1 = new Scene(root1);
         appst.setScene(scene1);
+
         appst.show();
     }
     @FXML
