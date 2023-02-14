@@ -67,9 +67,9 @@ public class StudentPageController implements Initializable {
             ex.add(e);
         examID.setCellValueFactory(new PropertyValueFactory<Exam,Integer>("ID"));
         course.setCellValueFactory(new PropertyValueFactory<Exam,String>("course"));
+        starttime.setCellValueFactory(new PropertyValueFactory<Exam,Float>("startTime"));
+        endtime.setCellValueFactory(new PropertyValueFactory<Exam,Float>("endTime"));
         duration.setCellValueFactory(new PropertyValueFactory<Exam,Float>("duration"));
-        endtime.setCellValueFactory(new PropertyValueFactory<Exam,Float>("endtime"));
-        starttime.setCellValueFactory(new PropertyValueFactory<Exam,Float>("starttime"));
         numofque.setCellValueFactory(new PropertyValueFactory<Exam,Integer>("num_of_questions"));
         table.setItems(ex);
 

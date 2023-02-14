@@ -60,7 +60,7 @@ public class Main extends Application {
         courses = new ArrayList<Course>();
         courses.add(opp);
         courses.add(logic);
-        Exam exam = new Exam(opp, "64");
+        Exam exam = new Exam(opp, 30F, 9F, 11F,"64");
         Histogram his = new Histogram(exam);
         ExamReport exrp = new ExamReport(exam,his);
         exam.setExam_report(exrp);

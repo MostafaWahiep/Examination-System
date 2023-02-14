@@ -97,13 +97,14 @@ public class Exam {
         return insName;
     }
 
+    public Float getStartTime() {
+        return startTime;
+    }
+
     public Float getDuration() {
         return duration;
     }
 
-    public Float getStartTime() {
-        return startTime;
-    }
 
     public Float getEndTime() {
         return endTime;
