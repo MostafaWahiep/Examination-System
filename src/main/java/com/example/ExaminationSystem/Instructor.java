@@ -7,6 +7,7 @@ public class Instructor extends User{
     private int age;
     private Course[] courses;
     private int num_of_courses = 0;
+
     public Instructor(String username, String password, String name, String mobile_num, String email, int age) {
         super(username, password);
         this.name = name;

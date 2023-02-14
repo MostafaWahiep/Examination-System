@@ -49,6 +49,10 @@ public class Question {
         return choices[x];
     }
 
+    public char getCorrect_choice() {
+        return correct_choice;
+    }
+
     public int check_ans(char c) {
         if(c == correct_choice)
             return grade;

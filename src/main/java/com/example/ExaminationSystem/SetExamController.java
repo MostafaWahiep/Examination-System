@@ -54,7 +54,6 @@ public class SetExamController {
             courseList.add(c.getName());
         Course.setItems(courseList);
         AddQuestionsTab();
-
     }
     @FXML
     private void create(){
@@ -76,7 +75,8 @@ public class SetExamController {
         appst.show();
     }
     @FXML
-    private void addquestion(){
+    private void addquestion()
+    {
         String[] choices = new String[4];
         choices[0] = firstAnswer.getText();
         choices[1] = secondAnswer.getText();
@@ -94,6 +94,7 @@ public class SetExamController {
         Grade.setText("");
         AddQuestionsTab();
     }
+
     void AddQuestionsTab()
     {
 
@@ -101,18 +102,19 @@ public class SetExamController {
         for(int i=0;i<Main.exams.get(0).getNum_of_questions();i++)
         {
             TreeItem<String> Root=new TreeItem<>(Main.exams.get(0).getQuestions()[i].getName());
-            TreeItem<String> Choice1=new TreeItem<>(Main.exams.get(0).getQuestions()[i].getChoices(0));
-            TreeItem<String> Choice2=new TreeItem<>(Main.exams.get(0).getQuestions()[i].getChoices(1));
-            TreeItem<String> Choice3=new TreeItem<>(Main.exams.get(0).getQuestions()[i].getChoices(2));
-            TreeItem<String> Choice4=new TreeItem<>(Main.exams.get(0).getQuestions()[i].getChoices(3));
+            TreeItem<String> Choice1=new TreeItem<>("a. " + Main.exams.get(0).getQuestions()[i].getChoices(0));
+            TreeItem<String> Choice2=new TreeItem<>("b. " + Main.exams.get(0).getQuestions()[i].getChoices(1));
+            TreeItem<String> Choice3=new TreeItem<>("c. " + Main.exams.get(0).getQuestions()[i].getChoices(2));
+            TreeItem<String> Choice4=new TreeItem<>("d. " + Main.exams.get(0).getQuestions()[i].getChoices(3));
             TreeItem<String> Grade=new TreeItem<>("Grade: "+ Integer.toString(Main.exams.get(0).getQuestions()[i].getGrade()));
-            Root.getChildren().addAll(Choice1,Choice2,Choice3,Choice4,Grade);
+            TreeItem<String> CorrectChoice=new TreeItem<>("CorrectChoice: " + String.valueOf(Main.exams.get(0).getQuestions()[i].getCorrect_choice()));
+            Root.getChildren().addAll(Choice1,Choice2,Choice3,Choice4,Grade, CorrectChoice);
+
+            Root.setExpanded(true);
             dummyroot.getChildren().addAll(Root);
         }
         DisplayQuestons.setRoot(dummyroot);
         DisplayQuestons.setShowRoot(false);
-
-
 
     }
 }
