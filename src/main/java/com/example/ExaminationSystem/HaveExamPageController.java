@@ -15,7 +15,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HaveExamPageController implements Initializable {
-    Integer[] cc;
+    Integer[] Questions;
     char[] ans;
     Integer at = 0;
     int x;
@@ -50,10 +50,10 @@ public class HaveExamPageController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         x = Main.toexam.getNum_of_questions();
         ans = new char[x];
-        cc = new Integer[x];
+        Questions = new Integer[x];
         for(int i = 0; i < x; i++)
-            cc[i] = i +1 ;
-        list.getItems().addAll(cc);
+            Questions[i] = i +1 ;
+        list.getItems().addAll(Questions);
         setquestion(0);
         c1.setSelected(false);
         c2.setSelected(false);
@@ -118,7 +118,6 @@ public class HaveExamPageController implements Initializable {
         c3.setText("c " + Main.toexam.getQuestions()[i].getChoices(2));
         c4.setText("d " + Main.toexam.getQuestions()[i].getChoices(3));
     }
-
     @FXML
     void ret(ActionEvent event)throws IOException {
         Parent root1 = FXMLLoader.load(getClass().getResource("StudentPage.fxml"));
@@ -128,6 +127,4 @@ public class HaveExamPageController implements Initializable {
         appst.show();
 
     }
-
-
 }

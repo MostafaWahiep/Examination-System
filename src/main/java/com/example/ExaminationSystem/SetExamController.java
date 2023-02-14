@@ -8,11 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Tab;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -20,6 +16,8 @@ import java.io.IOException;
 public class SetExamController {
     Exam exam;
     ObservableList<String> courseList = FXCollections.observableArrayList();
+    @FXML
+    private TreeView<String> DisplayQuestons;
     @FXML
     private TextField startTime;
     @FXML
@@ -50,12 +48,13 @@ public class SetExamController {
     private Tab AddedQuestionsTab;
     @FXML
     private Tab SetExamTab;
-
     @FXML
     private void initialize(){
         for(Course c: Main.courses)
             courseList.add(c.getName());
         Course.setItems(courseList);
+        AddQuestionsTab();
+
     }
     @FXML
     private void create(){
@@ -93,5 +92,27 @@ public class SetExamController {
         Question.setText("");
         correctAnswer.setText("");
         Grade.setText("");
+        AddQuestionsTab();
+    }
+    void AddQuestionsTab()
+    {
+
+        TreeItem<String> dummyroot=new TreeItem<>(" ");
+        for(int i=0;i<Main.exams.get(0).getNum_of_questions();i++)
+        {
+            TreeItem<String> Root=new TreeItem<>(Main.exams.get(0).getQuestions()[i].getName());
+            TreeItem<String> Choice1=new TreeItem<>(Main.exams.get(0).getQuestions()[i].getChoices(0));
+            TreeItem<String> Choice2=new TreeItem<>(Main.exams.get(0).getQuestions()[i].getChoices(1));
+            TreeItem<String> Choice3=new TreeItem<>(Main.exams.get(0).getQuestions()[i].getChoices(2));
+            TreeItem<String> Choice4=new TreeItem<>(Main.exams.get(0).getQuestions()[i].getChoices(3));
+            TreeItem<String> Grade=new TreeItem<>("Grade: "+ Integer.toString(Main.exams.get(0).getQuestions()[i].getGrade()));
+            Root.getChildren().addAll(Choice1,Choice2,Choice3,Choice4,Grade);
+            dummyroot.getChildren().addAll(Root);
+        }
+        DisplayQuestons.setRoot(dummyroot);
+        DisplayQuestons.setShowRoot(false);
+
+
+
     }
 }
