@@ -14,6 +14,8 @@ import java.io.IOException;
 
 public class LogInPageController {
 
+  //  private JFXButton d;
+
     @FXML
     private Label Wrong_Login;
 

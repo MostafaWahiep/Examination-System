@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane minWidth="-Infinity" prefHeight="612.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ExaminationSystem.RegisterPageController">
@@ -16,11 +18,16 @@
       <Label layoutX="23.0" layoutY="28.0" text="Username :" />
       <Label layoutX="23.0" layoutY="103.0" text="Password:" />
       <Label text="Registeration Page " />
-      <Label layoutX="28.0" layoutY="179.0" prefHeight="26.0" prefWidth="36.0" text="Name:" />
+      <Label layoutX="28.0" layoutY="179.0" prefHeight="26.0" prefWidth="67.0" text="Name:" />
       <Label layoutX="23.0" layoutY="262.0" text="ID :" />
       <Label layoutX="28.0" layoutY="341.0" text="Mobile Number ;" />
       <Label layoutX="23.0" layoutY="418.0" prefHeight="26.0" prefWidth="103.0" text="Email Address :" />
       <Label layoutX="459.0" layoutY="28.0" />
       <Button layoutX="88.0" layoutY="492.0" mnemonicParsing="false" onAction="#btnreg" text="Register" />
+      <ImageView fitHeight="612.0" fitWidth="587.0" layoutX="252.0" layoutY="-1.0">
+         <image>
+            <Image url="@7LDs.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
