@@ -42,5 +42,6 @@
             <Font name="Lucida Sans Unicode" size="14.0" />
          </font></Label>
       <PasswordField fx:id="textpass" layoutX="244.0" layoutY="131.0" promptText="Password" />
+      <Label fx:id="Wrong_Login" layoutX="245.0" layoutY="165.0" prefHeight="26.0" prefWidth="443.0" />
    </children>
 </AnchorPane>

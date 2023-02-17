@@ -53,7 +53,7 @@ public class SetExamController {
         for(Course c: Main.courses)
             courseList.add(c.getName());
         Course.setItems(courseList);
-        AddQuestionsTab();
+
     }
     @FXML
     private void create(){
@@ -99,15 +99,15 @@ public class SetExamController {
     {
 
         TreeItem<String> dummyroot=new TreeItem<>(" ");
-        for(int i=0;i<Main.exams.get(0).getNum_of_questions();i++)
+        for(int i=0;i<exam.getNum_of_questions();i++)
         {
-            TreeItem<String> Root=new TreeItem<>(Main.exams.get(0).getQuestions()[i].getName());
-            TreeItem<String> Choice1=new TreeItem<>("a. " + Main.exams.get(0).getQuestions()[i].getChoices(0));
-            TreeItem<String> Choice2=new TreeItem<>("b. " + Main.exams.get(0).getQuestions()[i].getChoices(1));
-            TreeItem<String> Choice3=new TreeItem<>("c. " + Main.exams.get(0).getQuestions()[i].getChoices(2));
-            TreeItem<String> Choice4=new TreeItem<>("d. " + Main.exams.get(0).getQuestions()[i].getChoices(3));
-            TreeItem<String> Grade=new TreeItem<>("Grade: "+ Integer.toString(Main.exams.get(0).getQuestions()[i].getGrade()));
-            TreeItem<String> CorrectChoice=new TreeItem<>("CorrectChoice: " + String.valueOf(Main.exams.get(0).getQuestions()[i].getCorrect_choice()));
+            TreeItem<String> Root=new TreeItem<>(exam.getQuestions()[i].getName());
+            TreeItem<String> Choice1=new TreeItem<>("a. " + exam.getQuestions()[i].getChoices(0));
+            TreeItem<String> Choice2=new TreeItem<>("b. " + exam.getQuestions()[i].getChoices(1));
+            TreeItem<String> Choice3=new TreeItem<>("c. " + exam.getQuestions()[i].getChoices(2));
+            TreeItem<String> Choice4=new TreeItem<>("d. " + exam.getQuestions()[i].getChoices(3));
+            TreeItem<String> Grade=new TreeItem<>("Grade: "+ Integer.toString(exam.getQuestions()[i].getGrade()));
+            TreeItem<String> CorrectChoice=new TreeItem<>("Correct Choice: " + String.valueOf(exam.getQuestions()[i].getCorrect_choice()));
             Root.getChildren().addAll(Choice1,Choice2,Choice3,Choice4,Grade, CorrectChoice);
 
             Root.setExpanded(true);

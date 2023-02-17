@@ -20,8 +20,6 @@ public class InstructorMainPageController {
     private ComboBox<String> List;
 
 
-    @FXML
-    private Label profname;
 
     @FXML
     private Button reportb;
@@ -74,8 +72,7 @@ public class InstructorMainPageController {
 
     public void initialize() {
 
-        profname.setText(""); //get instructor name
-        List.getItems().add(" "); //looping on number of courses and adding them
+         List.getItems().add(" "); //looping on number of courses and adding them
     }
 
 }
