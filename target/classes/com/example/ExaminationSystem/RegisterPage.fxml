@@ -2,32 +2,53 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane minWidth="-Infinity" prefHeight="612.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ExaminationSystem.RegisterPageController">
+<AnchorPane minWidth="-Infinity" prefHeight="612.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ExaminationSystem.RegisterPageController">
    <children>
-      <TextField fx:id="UsernameTextField" layoutX="23.0" layoutY="51.0" prefHeight="26.0" prefWidth="202.0" />
-      <TextField fx:id="PasswordTextField" layoutX="23.0" layoutY="132.0" prefHeight="26.0" prefWidth="202.0" />
-      <TextField fx:id="NameTextField" layoutX="24.0" layoutY="208.0" prefHeight="26.0" prefWidth="202.0" />
-      <TextField fx:id="IDField" layoutX="24.0" layoutY="287.0" prefHeight="26.0" prefWidth="202.0" />
-      <TextField fx:id="MobileNumberTextField" layoutX="25.0" layoutY="373.0" prefHeight="26.0" prefWidth="202.0" />
-      <TextField fx:id="EmailAddressTextField" layoutX="24.0" layoutY="444.0" prefHeight="26.0" prefWidth="202.0" />
-      <Label layoutX="23.0" layoutY="28.0" text="Username :" />
-      <Label layoutX="23.0" layoutY="103.0" text="Password:" />
-      <Label text="Registeration Page " />
-      <Label layoutX="28.0" layoutY="179.0" prefHeight="26.0" prefWidth="67.0" text="Name:" />
-      <Label layoutX="23.0" layoutY="262.0" text="ID :" />
-      <Label layoutX="28.0" layoutY="341.0" text="Mobile Number ;" />
-      <Label layoutX="23.0" layoutY="418.0" prefHeight="26.0" prefWidth="103.0" text="Email Address :" />
-      <Label layoutX="459.0" layoutY="28.0" />
-      <Button layoutX="88.0" layoutY="492.0" mnemonicParsing="false" onAction="#btnreg" text="Register" />
-      <ImageView fitHeight="612.0" fitWidth="587.0" layoutX="252.0" layoutY="-1.0">
+      <ImageView accessibleRole="BUTTON" fitHeight="612.0" fitWidth="839.0" layoutX="1.0">
          <image>
-            <Image url="@7LDs.gif" />
+            <Image url="@LogInPageIcon.png" />
          </image>
       </ImageView>
+      <TextField fx:id="UsernameTextField" layoutX="24.0" layoutY="53.0" prefHeight="26.0" prefWidth="202.0" promptText="Username" />
+      <PasswordField fx:id="PasswordTextField" layoutX="24.0" layoutY="132.0" prefHeight="26.0" prefWidth="202.0" promptText="Password" />
+      <TextField fx:id="NameTextField" layoutX="318.0" layoutY="53.0" prefHeight="26.0" prefWidth="202.0" promptText="Name" />
+      <TextField fx:id="IDField" layoutX="318.0" layoutY="132.0" prefHeight="26.0" prefWidth="202.0" promptText="ID" />
+      <TextField fx:id="MobileNumberTextField" layoutX="600.0" layoutY="53.0" prefHeight="26.0" prefWidth="202.0" promptText="Mobile Number" />
+      <TextField fx:id="EmailAddressTextField" layoutX="600.0" layoutY="132.0" prefHeight="26.0" prefWidth="202.0" promptText="Email Address" />
+      <Label layoutX="23.0" layoutY="23.0" prefHeight="30.0" prefWidth="103.0" text="Username :">
+         <font>
+            <Font name="Lucida Sans Unicode" size="18.0" />
+         </font></Label>
+      <Label layoutX="23.0" layoutY="103.0" text="Password:">
+         <font>
+            <Font name="Lucida Sans Unicode" size="18.0" />
+         </font></Label>
+      <Label layoutX="314.0" layoutY="24.0" prefHeight="26.0" prefWidth="67.0" text="Name:">
+         <font>
+            <Font name="Lucida Sans Unicode" size="18.0" />
+         </font></Label>
+      <Label layoutX="318.0" layoutY="103.0" text="ID :">
+         <font>
+            <Font name="Lucida Sans Unicode" size="18.0" />
+         </font></Label>
+      <Label layoutX="597.0" layoutY="24.0" text="Mobile Number :">
+         <font>
+            <Font name="Lucida Sans Unicode" size="18.0" />
+         </font></Label>
+      <Label layoutX="597.0" layoutY="102.0" prefHeight="30.0" prefWidth="146.0" text="Email Address :">
+         <font>
+            <Font name="Lucida Sans Unicode" size="18.0" />
+         </font></Label>
+      <Button layoutX="688.0" layoutY="188.0" mnemonicParsing="false" onAction="#btnreg" prefHeight="56.0" prefWidth="115.0" style="-fx-background-color: #2E2E18;" text="Register" textFill="#fcfcfc">
+         <font>
+            <Font name="Lucida Sans Unicode" size="18.0" />
+         </font></Button>
    </children>
 </AnchorPane>
