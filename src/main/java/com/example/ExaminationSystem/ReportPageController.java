@@ -41,6 +41,7 @@ public class ReportPageController {
     void reportdis(ActionEvent event) {
         if(examcode.getSelectionModel().isEmpty()==false)
         {
+            graph.getData().clear();
             err.setText("");
             tt.setVisible(true);
             toughquestions.setVisible(true);
