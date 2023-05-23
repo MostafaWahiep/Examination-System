@@ -1,7 +1,5 @@
 package com.example.ExaminationSystem;
 
-import java.util.Scanner;
-
 public class Student extends User {
     private String name;
     private String ID;
@@ -17,20 +15,7 @@ public class Student extends User {
         this.ID = ID;
         this.mobile_num = mobile_num;
         this.email = email;
-        this.exams = exams;
         exams = new Exam[1];
-    }
-
-    public void setexam(Exam exam){
-        Scanner s = new Scanner(System.in);
-        addexam(exam);
-        int grade = 0;
-        for(Question q:exam.getQuestions()){
-            System.out.print("enter your choice: ");
-            grade += q.check_ans(s.next().charAt(0));
-        }
-        System.out.println("your grade is " + grade +" out of " + exam.getMark());
-        exam.getExam_report().getHisto().addgrade(grade);
     }
 
     public String getName() {

@@ -55,11 +55,13 @@ public class Main extends Application {
         instructors.add(i1);
         instructors.add(i2);
         admins = new ArrayList<Adminstrator>();
-        Course opp = new Course("opp1", "opp", "cse231", i1);
+        Course opp = new Course("oop1", "oop", "cse231", i1);
         Course logic = new Course("opp2", "logic", "cse111", i2);
         courses = new ArrayList<Course>();
         courses.add(opp);
         courses.add(logic);
+        opp.setCourse_content("This is the content of the course of opp");
+        logic.setCourse_content("This is the content of the course of logic");
         Exam exam = new Exam(opp, 30F, 9F, 11F,"64");
         Histogram his = new Histogram(exam);
         ExamReport exrp = new ExamReport(exam,his);

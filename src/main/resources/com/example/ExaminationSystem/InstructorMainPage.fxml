@@ -8,35 +8,55 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="612.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ExaminationSystem.InstructorMainPageController">
+<AnchorPane prefHeight="612.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ExaminationSystem.InstructorMainPageController">
    <children>
       <Button fx:id="returnb" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#backk" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #2E2E18;" text="Return" textFill="#f2efef">
          <font>
             <Font name="Lucida Sans Unicode" size="13.0" />
          </font></Button>
-      <Label fx:id="profl" layoutX="323.0" layoutY="61.0" prefHeight="68.0" prefWidth="199.0" text="Welcome Professor">
+      <Label fx:id="profl" layoutX="323.0" layoutY="8.0" prefHeight="68.0" prefWidth="199.0" text="Welcome Professor">
          <font>
             <Font name="Agency FB" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="setexamb" layoutX="90.0" layoutY="504.0" mnemonicParsing="false" onAction="#setexamb" prefHeight="74.0" prefWidth="242.0" style="-fx-background-color: #2E2E18;" text="Set Exam" textFill="#f2eeee">
+      <Button fx:id="setexamb" layoutX="121.0" layoutY="281.0" mnemonicParsing="false" onAction="#setexamb" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #2E2E18;" text="Set Exam" textFill="#f2eeee">
          <font>
             <Font name="Lucida Sans Unicode" size="20.0" />
          </font></Button>
-      <ImageView accessibleRole="BUTTON" fitHeight="355.0" fitWidth="420.0" layoutX="1.0" layoutY="132.0">
+      <ImageView accessibleRole="BUTTON" fitHeight="215.0" fitWidth="255.0" layoutX="69.0" layoutY="76.0">
          <image>
             <Image url="@SetExamIcon.jpg" />
          </image>
       </ImageView>
       <ComboBox fx:id="List" blendMode="HARD_LIGHT" layoutX="674.0" layoutY="14.0" prefWidth="150.0" promptText="List of Courses" />
-      <Button fx:id="reportb" blendMode="DARKEN" layoutX="521.0" layoutY="504.0" mnemonicParsing="false" onAction="#reportb" prefHeight="74.0" prefWidth="224.0" style="-fx-background-color: #2E2E18;" text="View Exam Reports" textFill="#fcfcfc">
+      <Button fx:id="reportb" blendMode="DARKEN" layoutX="556.0" layoutY="287.0" mnemonicParsing="false" onAction="#reportb" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #2E2E18;" text="View Exam Reports" textFill="#fcfcfc">
          <font>
             <Font name="Lucida Sans Unicode" size="20.0" />
          </font>
       </Button>
-      <ImageView accessibleRole="BUTTON" fitHeight="355.0" fitWidth="420.0" layoutX="423.0" layoutY="132.0">
+      <ImageView accessibleRole="BUTTON" fitHeight="215.0" fitWidth="255.0" layoutX="504.0" layoutY="72.0">
          <image>
             <Image url="@ReportIcon.png" />
+         </image>
+      </ImageView>
+      <Button blendMode="DARKEN" layoutX="121.0" layoutY="546.0" mnemonicParsing="false" onAction="#editcourse" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #2E2E18;" text="Edit Courses" textFill="#fcfcfc">
+         <font>
+            <Font name="Lucida Sans Unicode" size="20.0" />
+         </font>
+      </Button>
+      <ImageView accessibleRole="BUTTON" fitHeight="215.0" fitWidth="255.0" layoutX="69.0" layoutY="331.0">
+         <image>
+            <Image url="@Course%20Content.png" />
+         </image>
+      </ImageView>
+      <Button blendMode="DARKEN" layoutX="556.0" layoutY="546.0" mnemonicParsing="false" onAction="#sendfeedback" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #2E2E18;" text="Send Feedback" textFill="#fcfcfc">
+         <font>
+            <Font name="Lucida Sans Unicode" size="20.0" />
+         </font>
+      </Button>
+      <ImageView accessibleRole="BUTTON" fitHeight="215.0" fitWidth="255.0" layoutX="504.0" layoutY="337.0">
+         <image>
+            <Image url="@feedback-icon.png" />
          </image>
       </ImageView>
    </children>

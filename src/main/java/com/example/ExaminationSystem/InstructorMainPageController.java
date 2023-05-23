@@ -57,7 +57,6 @@ public class InstructorMainPageController {
     @FXML
     void returnpage(ActionEvent event) throws IOException{
   //switch to the previous page
-
     }
 
     @FXML
@@ -69,10 +68,32 @@ public class InstructorMainPageController {
         appst.show();
     }
 
+    @FXML
+    void editcourse(ActionEvent event) throws IOException{
+        Parent root1 = FXMLLoader.load(getClass().getResource("EditCoursePage.fxml"));
+        Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
+        Scene scene1 = new Scene(root1);
+        appst.setScene(scene1);
+        appst.show();
+    }
+
+    @FXML
+    void sendfeedback(ActionEvent event) throws IOException{
+        Parent root1 = FXMLLoader.load(getClass().getResource("SendFeedbackPage.fxml"));
+        Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
+        Scene scene1 = new Scene(root1);
+        appst.setScene(scene1);
+        appst.show();
+    }
 
     public void initialize() {
-
-         List.getItems().add(" "); //looping on number of courses and adding them
+        //looping on number of courses and adding them
+        for(int i=0;i<Main.courses.size();i++){
+            List.getItems().add(Main.courses.get(i).getName());
+        }
     }
+
+
+
 
 }

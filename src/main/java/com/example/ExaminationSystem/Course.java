@@ -8,6 +8,7 @@ public class Course {
     private Exam setofexams[];
     private Student students[];
     private int num_of_exams;
+    private String course_content;
     private boolean first_exam = false;
 
     public Course(String ID, String name, String course_code, Instructor instructor) {
@@ -16,6 +17,14 @@ public class Course {
         this.course_code = course_code;
         this.instructor = instructor;
         setofexams = new Exam[1];
+    }
+
+    public void setCourse_content(String course_content) {
+        this.course_content = course_content;
+    }
+
+    public String getCourse_content() {
+        return course_content;
     }
 
     public String getName() {
