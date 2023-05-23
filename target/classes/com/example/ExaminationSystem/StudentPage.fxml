@@ -27,5 +27,6 @@
          <font>
             <Font name="Lucida Sans Unicode" size="13.0" />
          </font></Button>
+      <Button fx:id="AddCourse" layoutX="327.0" layoutY="14.0" mnemonicParsing="false" onAction="#AddCourse" prefHeight="36.0" prefWidth="177.0" text="Register a new course" />
    </children>
 </AnchorPane>

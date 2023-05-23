@@ -1,0 +1,12 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(þ´Ç¾þÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…ŒôÊüÿÿÿÿ
+o	java:S116"URename this field "mobile_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÐÃ¾¤úÿÿÿÿ
+m	java:S116	"YRename this field "num_of_courses" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ä‚	
+V	java:S125"<This block of commented-out lines of code should be removed.(Üå£®ûÿÿÿÿ
+I
+java:S1068".Remove this unused "mobile_num" private field.(ÐÃ¾¤úÿÿÿÿ
+D
+java:S1068")Remove this unused "email" private field.(ª«Õìùÿÿÿÿ
+B
+java:S1068"'Remove this unused "age" private field.(Æ†´¦þÿÿÿÿ

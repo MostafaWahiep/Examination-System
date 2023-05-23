@@ -23,6 +23,8 @@ public class Main extends Application {
     static ArrayList<Exam> exams;
     static ArrayList<Course> courses;
     static Exam toexam = null;
+
+    static Course tocourse = null;
     public static int nom=0;
 
     @Override
@@ -32,6 +34,8 @@ public class Main extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
+
+
     }
 
     public static void main(String[] args) {
@@ -87,6 +91,7 @@ public class Main extends Application {
         exam.addquestion(q5);
         exam.addquestion(q6);
         exam.addquestion(q7);
+
         launch();
     }
     public static boolean stlogin(TestLogin T)
