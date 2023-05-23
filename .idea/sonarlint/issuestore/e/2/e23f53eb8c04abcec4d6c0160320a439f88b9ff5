@@ -1,0 +1,22 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸”‡àÿÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…ŒôÊüÿÿÿÿ
+b	java:S116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÌèš
+p	java:S116"VRename this field "course_Code" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ç€—ùÿÿÿÿ
+q	java:S116"\Rename this field "validation_status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½™·
+u	java:S116"[Rename this field "num_of_questions" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›­ÑÀûÿÿÿÿ
+m	java:S116"YRename this field "first_question" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ü‚$
+p	java:S116"VRename this field "exam_report" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì¬³‰ùÿÿÿÿ
+p
+java:S3008"URename this field "n_of_exams" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®×ãõşÿÿÿÿ
+E
+java:S1197"*Move the array designators [] to the type.(µ©©óûÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸”‡àÿÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùš Ğøÿÿÿÿ
+c	java:S100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šìï¿
+B
+java:S1125M"'Remove the unnecessary boolean literal.(†èü¾üÿÿÿÿ
+c	java:S100\"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¹ñê
+h	java:S100u"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Øîüÿÿÿÿ
+c	java:S100y"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬´”
+c	java:S100}"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äØìº

@@ -25,6 +25,9 @@ public class StudentPageController implements Initializable {
     private TableColumn<Exam, String> course;
 
     @FXML
+    private Button addCourse;
+
+    @FXML
     private TableColumn<Exam, Float> duration;
 
     @FXML
@@ -54,7 +57,7 @@ public class StudentPageController implements Initializable {
     void back(ActionEvent event) throws IOException {
         Main.UserType = 0;
         Parent root1 = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
-        Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
+        Stage appst = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene1 = new Scene(root1);
         appst.setScene(scene1);
         appst.show();
@@ -63,28 +66,39 @@ public class StudentPageController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ObservableList<Exam> ex = FXCollections.observableArrayList();
-        for (Exam e: Main.exams)
+        for (Exam e : Main.exams)
             ex.add(e);
-        examID.setCellValueFactory(new PropertyValueFactory<Exam,Integer>("ID"));
-        course.setCellValueFactory(new PropertyValueFactory<Exam,String>("course"));
-        starttime.setCellValueFactory(new PropertyValueFactory<Exam,Float>("startTime"));
-        endtime.setCellValueFactory(new PropertyValueFactory<Exam,Float>("endTime"));
-        duration.setCellValueFactory(new PropertyValueFactory<Exam,Float>("duration"));
-        numofque.setCellValueFactory(new PropertyValueFactory<Exam,Integer>("num_of_questions"));
+        examID.setCellValueFactory(new PropertyValueFactory<Exam, Integer>("ID"));
+        course.setCellValueFactory(new PropertyValueFactory<Exam, String>("course"));
+        starttime.setCellValueFactory(new PropertyValueFactory<Exam, Float>("startTime"));
+        endtime.setCellValueFactory(new PropertyValueFactory<Exam, Float>("endTime"));
+        duration.setCellValueFactory(new PropertyValueFactory<Exam, Float>("duration"));
+        numofque.setCellValueFactory(new PropertyValueFactory<Exam, Integer>("num_of_questions"));
         table.setItems(ex);
 
     }
+
     @FXML
-    public void enter(ActionEvent event) throws IOException{
-        if(table.getSelectionModel().isEmpty()== false)
-        {
+    public void enter(ActionEvent event) throws IOException {
+        if (table.getSelectionModel().isEmpty() == false) {
             Main.toexam = table.getSelectionModel().getSelectedItem();
             Parent root1 = FXMLLoader.load(getClass().getResource("HaveExamPage.fxml"));
-            Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
+            Stage appst = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene1 = new Scene(root1);
             appst.setScene(scene1);
             appst.show();
 
         }
     }
-}
+
+    @FXML
+    public void AddCourse(ActionEvent event) throws IOException {
+
+            Parent root1 = FXMLLoader.load(getClass().getResource("AddCourse.fxml"));
+            Stage appst = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene1 = new Scene(root1);
+            appst.setScene(scene1);
+            appst.show();
+        }
+    }
+
