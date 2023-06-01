@@ -118,7 +118,6 @@ public class EditCoursePageController {
                     }
                 }
             }
-            fileList.add("Add File");
             filesListView.setItems(fileList);
         }
     }
@@ -139,6 +138,27 @@ public class EditCoursePageController {
             }
         }
 
+    }
+
+    @FXML
+    private void deleteFileButton() {
+        if (List.getValue() == null) {
+            displayErrorMessage("Please select a course");
+            return;
+        }
+        if(filesListView.getSelectionModel().getSelectedItem() == null){
+            displayErrorMessage("Please select a file");
+            return;
+        }
+        String directoryPath = System.getProperty("user.dir")+ "/Content/" + Main.courses.get(index).getName() + "/";
+        String selectedFileName = filesListView.getSelectionModel().getSelectedItem();
+        String filePath = directoryPath + selectedFileName; // Specify the directory path here
+
+        File file = new File(filePath);
+        if (file.exists()) {
+            file.delete();
+        }
+        course_selected();
     }
 
     @FXML

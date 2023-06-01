@@ -7,6 +7,7 @@ public class Question {
     Integer countf;
     String evaloution_rank;
     private char correct_choice;
+
     public Question(String name, String choices[], char correct_choice, int grade) {
         this.name = name;
         this.choices = choices;
@@ -36,7 +37,6 @@ public class Question {
     public void setCorrect_choice(char correct_choice) {
         this.correct_choice = correct_choice;
     }
-
     public int getGrade() {
         return grade;
     }
