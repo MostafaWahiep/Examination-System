@@ -79,7 +79,7 @@ public class InstructorMainPageController {
 
     @FXML
     void sendfeedback(ActionEvent event) throws IOException{
-        Parent root1 = FXMLLoader.load(getClass().getResource("SendFeedbackPage.fxml"));
+        Parent root1 = FXMLLoader.load(getClass().getResource("SendFeedback.fxml"));
         Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
         Scene scene1 = new Scene(root1);
         appst.setScene(scene1);
