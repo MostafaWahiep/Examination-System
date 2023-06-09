@@ -1,4 +1,4 @@
-package com.example.ExaminationSystem;
+package com.example.ExaminationSystem.Models;
 
 public class Exam {
     private int ID;

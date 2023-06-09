@@ -1,5 +1,6 @@
 package com.example.ExaminationSystem;
 
+import com.example.ExaminationSystem.Models.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -50,7 +51,7 @@ public class SetExamController {
     private Tab SetExamTab;
     @FXML
     private void initialize(){
-        for(Course c: Main.courses)
+        for(com.example.ExaminationSystem.Models.Course c: Main.courses)
             courseList.add(c.getName());
         Course.setItems(courseList);
 
@@ -82,7 +83,7 @@ public class SetExamController {
         choices[1] = secondAnswer.getText();
         choices[2] = thirdAnswer.getText();
         choices[3] = fourthAnswer.getText();
-        Question q = new Question(Question.getText(), choices, correctAnswer.getText().charAt(0), new Integer(Grade.getText()));
+        com.example.ExaminationSystem.Models.Question q = new Question(Question.getText(), choices, correctAnswer.getText().charAt(0), new Integer(Grade.getText()));
         exam.addquestion(q);
         Mark.setText("Mark = " + exam.getMark());
         firstAnswer.setText("");

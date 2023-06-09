@@ -1,4 +1,4 @@
-package com.example.ExaminationSystem;
+package com.example.ExaminationSystem.Models;
 
 public class Course {
     private String ID;
@@ -52,5 +52,9 @@ public class Course {
 
     public String getID() {
         return ID;
+    }
+
+    public Exam[] getSetofexams() {
+        return setofexams;
     }
 }

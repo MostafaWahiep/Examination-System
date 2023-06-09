@@ -1,4 +1,4 @@
-package com.example.ExaminationSystem;
+package com.example.ExaminationSystem.Models;
 
 public class Student extends User {
     private String name;

@@ -1,4 +1,4 @@
-package com.example.ExaminationSystem;
+package com.example.ExaminationSystem.Models;
 
 public abstract class User {
     private String username;

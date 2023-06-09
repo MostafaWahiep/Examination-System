@@ -1,5 +1,6 @@
 package com.example.ExaminationSystem;
 
+import com.example.ExaminationSystem.Models.Exam;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

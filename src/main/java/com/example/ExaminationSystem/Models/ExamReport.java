@@ -1,4 +1,4 @@
-package com.example.ExaminationSystem;
+package com.example.ExaminationSystem.Models;
 
 import java.util.Arrays;
 public class ExamReport {
