@@ -121,6 +121,7 @@ public class EditCoursePageController {
             filesListView.setItems(fileList);
         }
     }
+
     @FXML
     void openFile(MouseEvent event) {
         if (event.getClickCount() == 2 && List.getValue() != null) {

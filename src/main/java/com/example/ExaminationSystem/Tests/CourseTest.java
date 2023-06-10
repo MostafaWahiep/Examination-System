@@ -36,7 +36,7 @@ public class CourseTest {
 
     @Test
     public void getName() {
-        String expected = "Introduction to Programming";
+        String expected = "Introduction o Programming";
         assertEquals(expected, course.getName());
     }
 
