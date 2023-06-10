@@ -9,7 +9,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import com.example.ExaminationSystem.Models.ExamAttempt;
+import com.example.ExaminationSystem.Models.Student;
 
+
+import java.time.LocalDate;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -99,12 +103,21 @@ public class HaveExamPageController implements Initializable {
             ans[at]='c';
         else if(c4.isSelected())
             ans[at]='d';
+        int answered = 0, correct = 0;
         for(int i = 0; i < x; i++)
         {
-            grade += Main.toexam.getQuestions()[i].check_ans(ans[i]);
+            if(ans[i] != 0)
+                answered++;
+            int s = Main.toexam.getQuestions()[i].check_ans(ans[i]);
+            if(s > 1)
+                correct++;
+            grade += s;
         }
-        gradeee.setText("your grade is " + grade);
+        gradeee.setText("your grade is " + grade + " out of " + Main.toexam.getMark());
         Main.toexam.getExam_report().getHisto().addgrade(grade);
+
+        // attempt with today's date
+        Main.examAttempts.add(new ExamAttempt((Student) Main.CurrentUser, Main.toexam, LocalDate.now().toString() , grade, answered, correct));
 
         c1.setDisable(true);
         c2.setDisable(true);

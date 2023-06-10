@@ -17,15 +17,17 @@ public class Main extends Application {
     2-->instructor
     3-->student
     */
-    static int UserType = 0;
-    static ArrayList<Student> students;
-    static ArrayList<Instructor> instructors;
-    static ArrayList<Adminstrator> admins;
-    static ArrayList<Exam> exams;
-    static ArrayList<Course> courses;
-    static Exam toexam = null;
+    public static int UserType = 0;
+    public static User CurrentUser = null;
+    public static ArrayList<Student> students;
+    public static ArrayList<Instructor> instructors;
+    public static ArrayList<Adminstrator> admins;
+    public static ArrayList<Exam> exams;
+    public static ArrayList<Course> courses;
+    public static ArrayList<ExamAttempt> examAttempts;
+    public static Exam toexam = null;
 
-    static Course tocourse = null;
+    public static Course tocourse = null;
     public static int nom=0;
 
     @Override
@@ -35,8 +37,6 @@ public class Main extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
-
-
     }
 
     public static void main(String[] args) {
@@ -95,28 +95,35 @@ public class Main extends Application {
         exam.addquestion(q6);
         exam.addquestion(q7);
 
+        examAttempts = new ArrayList<ExamAttempt>();
+        ExamAttempt ea1 = new ExamAttempt(s1, exam, "1/1/2021", 10, 6, 5);
+        ExamAttempt ea2 = new ExamAttempt(s2, exam, "2/1/2021", 12, 6, 6);
+        examAttempts.add(ea1);
+        examAttempts.add(ea2);
+
+
         launch();
     }
-    public static boolean stlogin(TestLogin T)
+    public static Student stlogin(TestLogin T)
     {
         for(int i=0;i<students.size();i++)
         {
             if(students.get(i).verify_login(T)==true)
             {
-                return true;
+                return students.get(i);
             }
         }
-        return false;
+        return null;
     }
-    public static boolean inlogin(TestLogin T)
+    public static Instructor inlogin(TestLogin T)
     {
         for(int i=0;i<instructors.size();i++)
         {
             if(instructors.get(i).verify_login(T)==true)
             {
-                return true;
+                return instructors.get(i);
             }
         }
-        return false;
+        return null;
     }
 }

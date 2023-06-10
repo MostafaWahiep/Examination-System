@@ -46,7 +46,8 @@ public class LogInPageController {
         Parent root1 = null;
         if(Main.UserType == 3)
         {
-            if(Main.stlogin(tt)==true) {
+            if(Main.stlogin(tt)!=null) {
+                Main.CurrentUser = Main.stlogin(tt);
                 root1 = FXMLLoader.load(getClass().getResource("StudentPage.fxml"));
                 Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
                 Scene scene1 = new Scene(root1);
@@ -58,7 +59,8 @@ public class LogInPageController {
         }
         else if(Main.UserType == 2)
         {
-            if(Main.inlogin(tt)==true) {
+            if(Main.inlogin(tt)!=null) {
+                Main.CurrentUser = Main.inlogin(tt);
                 root1 = FXMLLoader.load(getClass().getResource("InstructorMainPage.fxml"));
                 Stage appst=(Stage)((Node) event.getSource()).getScene().getWindow();
                 Scene scene1 = new Scene(root1);
