@@ -61,7 +61,7 @@ public class ExamAttempt {
         this.answered_questions = answered_questions;
     }
 
-    public int getCorrect_answers() {
+    public Integer getCorrect_answers() {
         return correct_answers;
     }
 
@@ -82,7 +82,7 @@ public class ExamAttempt {
     }
 
     public float getGradePercentage() {
-        return (float) grade / exam.getMark() * 100;
+        return (float) grade / exam.getMark() * 100F;
     }
 
     public Integer getNum_questions() {

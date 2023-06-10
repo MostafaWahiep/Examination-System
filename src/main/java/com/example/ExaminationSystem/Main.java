@@ -40,7 +40,12 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
+        initialize();
+        launch();
+    }
 
+    public static void initialize()
+    {
         Student s1 = new Student("s1", "p", "khalil", "1", "11", "45");
         Student s2 = new Student("s2", "p", "Donia", "2", "11", "45");
         Student s3 = new Student("s3", "p", "Omar", "3", "11", "45");
@@ -100,10 +105,8 @@ public class Main extends Application {
         ExamAttempt ea2 = new ExamAttempt(s2, exam, "2/1/2021", 12, 6, 6);
         examAttempts.add(ea1);
         examAttempts.add(ea2);
-
-
-        launch();
     }
+
     public static Student stlogin(TestLogin T)
     {
         for(int i=0;i<students.size();i++)
@@ -115,6 +118,7 @@ public class Main extends Application {
         }
         return null;
     }
+
     public static Instructor inlogin(TestLogin T)
     {
         for(int i=0;i<instructors.size();i++)
