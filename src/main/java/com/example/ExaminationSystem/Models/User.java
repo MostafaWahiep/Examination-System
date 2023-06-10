@@ -1,6 +1,6 @@
 package com.example.ExaminationSystem.Models;
 
-public abstract class User {
+public class User {
     private String username;
     private String password;
 

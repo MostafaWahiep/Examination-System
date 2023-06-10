@@ -37,12 +37,11 @@ public class Histogram {
         for(int i = 0; i < grades.length; i++)
             frequency_arr[grades[i]]++;
     }
-    public void display(){
+    public void display() {
         this.processFrequency_arr();
         System.out.println("Marks --- Frequency");
-        for (int i = 0; i < frequency_arr.length; i++)
-        {
-            System.out.println(i + "    ----    "+ frequency_arr[i]);
+        for (int i = 0; i < frequency_arr.length; i++) {
+            System.out.println(i + "    ----    " + frequency_arr[i]);
         }
     }
 

@@ -1,5 +1,7 @@
 package com.example.ExaminationSystem.Models;
 
+import java.util.List;
+
 public class Student extends User {
     private String name;
     private String ID;
@@ -33,4 +35,9 @@ public class Student extends User {
             have_exam = true;
         }
     }
+    public List<Exam> getExams() {
+        return List.of(exams);
+    }
+
 }
+

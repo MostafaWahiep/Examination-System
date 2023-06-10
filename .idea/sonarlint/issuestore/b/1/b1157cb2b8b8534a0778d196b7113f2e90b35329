@@ -1,8 +1,0 @@
-
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…ŒôÊüÿÿÿÿ
-z	java:S116"`Rename this field "EmailAddressTextField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ·‡‹ùÿÿÿÿ
-l	java:S116"RRename this field "IDField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÝÃúàøÿÿÿÿ
-u	java:S116"`Rename this field "MobileNumberTextField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àÏÍÞ
-m	java:S116"XRename this field "NameTextField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¿‰¹
-v	java:S116"\Rename this field "PasswordTextField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«Û§æýÿÿÿÿ
-q	java:S116 "\Rename this field "UsernameTextField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÎÊú

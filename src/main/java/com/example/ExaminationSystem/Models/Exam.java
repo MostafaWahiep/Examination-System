@@ -45,9 +45,6 @@ public class Exam {
         this.startTime = startTime;
         this.endTime = endTime;
     }
-    public Exam() {
-
-    }
     public int getID() {
         return ID;
     }
